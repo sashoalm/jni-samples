@@ -13,7 +13,7 @@ extern "C" {
  * Signature: (II)I
  */
 JNIEXPORT jint JNICALL Java_Sample1_nativeMultiply
-  (JNIEnv *, jclass, jint, jint);
+  (JNIEnv *, jobject, jint, jint);
 
 #ifdef __cplusplus
 }
