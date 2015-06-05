@@ -1,6 +1,6 @@
 class Sample1 {
     public static native int nativeMultiply(int a, int b);
-    public static int javaMultiply(int a, int b) {
+    public int javaMultiply(int a, int b) {
         System.out.println("javaMultiply(" + a + "," + b + ")=" + (a*b));
         return a*b;
     }
