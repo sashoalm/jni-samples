@@ -9,10 +9,10 @@ extern "C" {
 #endif
 /*
  * Class:     Sample1
- * Method:    multiply
+ * Method:    nativeMultiply
  * Signature: (II)I
  */
-JNIEXPORT jint JNICALL Java_Sample1_multiply
+JNIEXPORT jint JNICALL Java_Sample1_nativeMultiply
   (JNIEnv *, jclass, jint, jint);
 
 #ifdef __cplusplus
