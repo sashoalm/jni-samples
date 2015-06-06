@@ -9,11 +9,11 @@ extern "C" {
 #endif
 /*
  * Class:     Sample1
- * Method:    nativeMultiply
- * Signature: (II)I
+ * Method:    nativeReverse
+ * Signature: (Ljava/lang/String;)Ljava/lang/String;
  */
-JNIEXPORT jint JNICALL Java_Sample1_nativeMultiply
-  (JNIEnv *, jobject, jint, jint);
+JNIEXPORT jstring JNICALL Java_Sample1_nativeReverse
+  (JNIEnv *, jclass, jstring);
 
 #ifdef __cplusplus
 }

@@ -1,9 +1,13 @@
 #include "Sample1.h"
+#include <algorithm>
+#include <string>
 
-JNIEXPORT jint JNICALL Java_Sample1_nativeMultiply
-  (JNIEnv *env, jobject object, jint a, jint b)
+JNIEXPORT jstring JNICALL Java_Sample1_nativeReverse
+  (JNIEnv *env, jclass clazz, jstring jstr)
 {
-    jclass clazz = env->GetObjectClass(object);
-    jmethodID methodID = env->GetMethodID(clazz, "javaMultiply", "(II)I");
-    return env->CallIntMethod(object, methodID, a, b);
+    const char *buf = env->GetStringUTFChars(jstr, 0);
+    std::string s = buf;
+    env->ReleaseStringUTFChars(jstr, buf);
+    std::reverse(s.begin(), s.end());
+    return env->NewStringUTF(s.c_str());
 }
